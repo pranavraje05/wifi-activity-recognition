@@ -57,3 +57,8 @@ B.Tech ECE (AI & ML)
 
 🔗 GitHub: https://github.com/pranavraje05  
 📧 Email: pranavraje05@gmail.com
+
+
+## 📸 Output Screenshot
+
+![WiFi Activity Recognition Output](results/output.png)
