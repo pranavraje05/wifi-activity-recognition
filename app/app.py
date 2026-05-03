@@ -6,10 +6,10 @@ from src.model import train_model
 
 st.title("WiFi-Based Human Activity Recognition")
 
-# Train model using real dataset
+# Run training
 model, acc, y_test, preds = train_model()
 
-# Create confusion matrix
+# Confusion matrix
 cm = confusion_matrix(y_test, preds)
 
 st.subheader("📊 Model Performance")
@@ -22,6 +22,7 @@ ax.set_xlabel("Predicted")
 ax.set_ylabel("Actual")
 st.pyplot(fig)
 
+# Prediction upload
 st.subheader("📂 Upload CSV for Prediction")
 file = st.file_uploader("Upload CSV file")
 
