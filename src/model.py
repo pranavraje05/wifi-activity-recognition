@@ -12,10 +12,11 @@ def load_ucihar():
     print("Checking dataset path:", base_path)
     print("Exists:", os.path.exists(base_path))
 
-    X_train = pd.read_csv(f"{base_path}/train/X_train.txt", delim_whitespace=True, header=None)
+    # FIXED HERE 👇
+    X_train = pd.read_csv(f"{base_path}/train/X_train.txt", sep='\s+', header=None)
     y_train = pd.read_csv(f"{base_path}/train/y_train.txt", header=None)
 
-    X_test = pd.read_csv(f"{base_path}/test/X_test.txt", delim_whitespace=True, header=None)
+    X_test = pd.read_csv(f"{base_path}/test/X_test.txt", sep='\s+', header=None)
     y_test = pd.read_csv(f"{base_path}/test/y_test.txt", header=None)
 
     print("X_train shape:", X_train.shape)
