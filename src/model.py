@@ -1,3 +1,4 @@
+print("🔥 MODEL.PY IS RUNNING 🔥")
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
