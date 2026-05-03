@@ -4,15 +4,18 @@ from sklearn.metrics import accuracy_score
 import os
 
 def load_data():
-    base_path = "data/UCI HAR Dataset"
+    base_path = os.path.join("data", "UCI HAR Dataset")
 
-    # Load training data
-    X_train = pd.read_csv(os.path.join(base_path, "train/X_train.txt"), delim_whitespace=True, header=None)
-    y_train = pd.read_csv(os.path.join(base_path, "train/y_train.txt"), header=None)
+    # Training data
+    X_train = pd.read_csv(os.path.join(base_path, "train", "X_train.txt"), delim_whitespace=True, header=None)
+    y_train = pd.read_csv(os.path.join(base_path, "train", "y_train.txt"), header=None)
 
-    # Load testing data
-    X_test = pd.read_csv(os.path.join(base_path, "test/X_test.txt"), delim_whitespace=True, header=None)
-    y_test = pd.read_csv(os.path.join(base_path, "test/y_test.txt"), header=None)
+    # Testing data
+    X_test = pd.read_csv(os.path.join(base_path, "test", "X_test.txt"), delim_whitespace=True, header=None)
+    y_test = pd.read_csv(os.path.join(base_path, "test", "y_test.txt"), header=None)
+
+    print("X_train:", X_train.shape)
+    print("X_test:", X_test.shape)
 
     return X_train, X_test, y_train.values.ravel(), y_test.values.ravel()
 
